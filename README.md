@@ -25,10 +25,10 @@ A collaborative website project developed by four interns to practice Git, GitHu
 
 >>Project Title: Ember & Bean — a small-batch coffee roastery site with four pages: a marketing landing page, a product gallery, a subscriber dashboard, and an order form.
 
-- Hezekiah – Marketing landing page
-- Jesse –    Product gallery
-- Muleng –    Subscriber dashboard
-- Ripji  –   Order form
+- Hezekiah – Home Page
+- Jesse –    Shop Page
+- Muleng –   Dashboard Page
+- Ripji  –   Order page
 
 
 
@@ -45,7 +45,7 @@ A collaborative website project developed by four interns to practice Git, GitHu
 ## Technologies
 
 - HTML5
-- CSS3
+- CSS
 - AI
 
 
