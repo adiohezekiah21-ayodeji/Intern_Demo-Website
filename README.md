@@ -25,6 +25,8 @@ A collaborative website project developed by four interns to practice Git, GitHu
 
 >>Project Title: Ember & Bean — a small-batch coffee roastery site with four pages: a marketing landing page, a product gallery, a subscriber dashboard, and an order form.
 
+>>Project link: https://linkly.link/2nCMu
+
 - Hezekiah – Home Page
 - Jesse –    Shop Page
 - Muleng –   Dashboard Page
