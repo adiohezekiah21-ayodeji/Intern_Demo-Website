@@ -97,6 +97,45 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
     font-weight:700;
     letter-spacing:2px;
     font-family: var(--copper-light);
+.roast-section {
+    min-height: 100vh;
+    padding: 10px 9px 40px;
+
+    background: #24160f;
+    color: #f3e7d8;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+
+.roast-header {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 0;
+    margin-bottom: 23px;
+}
+
+.roast-header h2 {
+    margin: 0 0 10px;
+
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+
+    color: #f3e7d8;
+}
+
+.roast-header p {
+    margin: 0;
+
+    max-width: 440px;
+
+    font-size: 13.5px;
+    line-height: 1.55;
+
+    color: #d6c6b6;
 }
 
 
@@ -144,7 +183,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /*======================
 Grid
-======================*/
 
 .recipe-grid{
   margin: 2% 7% 5% 7%;
@@ -159,7 +197,6 @@ Grid
 
 /*======================
 Card
-======================*/
 
 .recipe-card{
 
@@ -189,7 +226,6 @@ Card
 
 /*======================
 Image
-======================*/
 
 .image{
 
@@ -222,7 +258,6 @@ Image
 
 /* =======================
       The Cone image
-========================== */
 .cone img{
   border-radius: 50%;
   width: 50px;
@@ -240,7 +275,6 @@ Image
 
 /*======================
 Badge
-======================*/
 
 .tags{
   display: flex;
@@ -272,7 +306,6 @@ Badge
 
 /*======================
 Content
-======================*/
 
 .content{
 
@@ -301,7 +334,6 @@ Content
 
 /*======================
 Bottom badges
-======================*/
 
 .details{
 
@@ -393,6 +425,333 @@ flex-wrap:wrap;
 }
 
 }
+
+
+
+
+/* =========================
+   ROAST GRID
+
+.roast-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    max-width: 880px;
+}
+
+
+/* =========================
+   ROAST CARD
+
+.roast-card {
+    overflow: hidden;
+
+    min-height: 275px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 11px;
+
+    background: #38251a;
+
+    transition: 0.3s ease;
+}
+
+.roast-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c9824e;
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   IMAGE PLACEHOLDER
+
+.bean-image {
+    position: relative;
+
+    height: 116px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    z-index: ;
+    background: linear-gradient(
+        135deg,
+        #4b3223,
+        #392519
+    );
+
+    color: rgba(255, 255, 255, 0.2);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+
+/* =========================
+   COFFEE CIRCLE
+
+.coffee-circle {
+    position: absolute;
+
+    right: 15px;
+    bottom: -18px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    border: 1px solid #f3d0af;
+
+    background: linear-gradient(
+        135deg,
+        #d08b50 0%,
+        #d08b50 45%,
+        #17100c 46%,
+        #17100c 100%
+    );
+
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   CARD CONTENT
+
+.card-content {
+    padding: 16px 15px 13px;
+}
+
+
+/* =========================
+   BADGES
+
+.badge {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.badge.organic {
+    background: rgba(113, 135, 74, 0.2);
+
+    color: #9bb27b;
+}
+
+.badge.limited {
+    background: rgba(180, 74, 44, 0.25);
+
+    color: #d66f48;
+}
+
+
+/* =========================
+   CARD TITLE
+
+.roast-card h3 {
+    margin: 13px 0 9px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+
+    color: #f4e6d7;
+}
+
+
+/* =========================
+   CARD DESCRIPTION
+
+.roast-card p {
+    margin: 0;
+
+    min-height: 38px;
+
+    color: #d5c1ae;
+
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CARD BOTTOM
+
+.card-bottom {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.card-bottom small {
+    color: rgba(255, 255, 255, 0.25);
+
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.card-bottom strong {
+    color: #e29a68;
+
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   TABLET
+
+@media (max-width: 900px) {
+
+    .roast-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+
+@media (max-width: 650px) {
+
+    .roast-section {
+        padding: 10px 15px 35px;
+    }
+
+    .roast-header p br {
+        display: none;
+    }
+
+    .roast-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .roast-card {
+        min-height: 270px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+
+@media (max-width: 450px) {
+
+    .roast-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roast-card {
+        min-height: auto;
+    }
+
+}
+
+
+
+.coffee-circle {
+    position: absolute;
+
+    right: 15px;
+    bottom: -18px;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    /* Circular cone-like design */
+    background:
+        conic-gradient(
+            from 215deg,
+            #17100c 0deg 65deg,
+            transparent 65deg 360deg
+        ),
+        radial-gradient(
+            circle at 35% 25%,
+            #e4a36e 0%,
+            #b86e3e 35%,
+            #542b1b 75%,
+            #1e100a 100%
+        );
+
+    border: 2px solid #e8d2bd;
+
+    /* Soft 3D depth */
+    box-shadow:
+        inset 4px 4px 8px rgba(255, 225, 190, 0.35),
+        inset -5px -5px 8px rgba(0, 0, 0, 0.65),
+        4px 6px 8px rgba(0, 0, 0, 0.45);
+
+    transition: 0.4s ease;
+}
+
+conic-gradient(
+    from 215deg,
+    #17100c 0deg 65deg,
+    transparent 65deg 360deg
+)
+
+#17100c 0deg 65deg
+
+
+.coffee-circle {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            from 215deg,
+            #17100c 0deg 65deg,
+            transparent 65deg
+        ),
+        radial-gradient(
+            circle at 35% 25%,
+            #e5a36d,
+            #a95e32 45%,
+            #3b1d12 100%
+        );
+
+    border: 2px solid #e8d2bd;
+
+    box-shadow:
+        inset 4px 4px 7px rgba(255, 230, 200, 0.4),
+        inset -5px -5px 8px rgba(0, 0, 0, 0.6),
+        3px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
