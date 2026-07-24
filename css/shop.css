@@ -106,10 +106,10 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
     font-family: Arial, sans-serif;
 }
+}
 
-
-/* =========================
-   HEADER
+/* ========HEADER=================*/
+   
 
 .roast-header {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -181,8 +181,8 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 
 
-/*======================
-Grid
+/*==========Grid============*/
+
 
 .recipe-grid{
   margin: 2% 7% 5% 7%;
@@ -195,8 +195,8 @@ Grid
     gap:28px;
 }
 
-/*======================
-Card
+/*==========Card============*/
+
 
 .recipe-card{
 
@@ -224,8 +224,8 @@ Card
     background-color: #7e5436b0;
 }
 
-/*======================
-Image
+/*=========Image=============*/
+
 
 .image{
 
@@ -256,8 +256,8 @@ Image
     
 }
 
-/* =======================
-      The Cone image
+/* ==========The Cone image=============*/
+      
 .cone img{
   border-radius: 50%;
   width: 50px;
@@ -273,8 +273,8 @@ Image
 
 
 
-/*======================
-Badge
+/*==========Badge============*/
+
 
 .tags{
   display: flex;
@@ -304,8 +304,8 @@ Badge
 }
 
 
-/*======================
-Content
+/*=========Content=============*/
+
 
 .content{
 
@@ -332,8 +332,8 @@ Content
     margin-bottom:24px;
 }
 
-/*======================
-Bottom badges
+/*========Bottom badges==============*/
+
 
 .details{
 
@@ -429,8 +429,8 @@ flex-wrap:wrap;
 
 
 
-/* =========================
-   ROAST GRID
+/* =========ROAST GRID================*/
+   
 
 .roast-grid {
     display: grid;
@@ -443,8 +443,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   ROAST CARD
+/* ========ROAST CARD=================*/
+   
 
 .roast-card {
     overflow: hidden;
@@ -468,8 +468,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   IMAGE PLACEHOLDER
+/* ==========IMAGE PLACEHOLDER===============*/
+   
 
 .bean-image {
     position: relative;
@@ -494,8 +494,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   COFFEE CIRCLE
+/* =========COFFEE CIRCLE================*/
+   
 
 .coffee-circle {
     position: absolute;
@@ -522,16 +522,16 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   CARD CONTENT
+/* =========CARD CONTENT================*/
+   
 
 .card-content {
     padding: 16px 15px 13px;
 }
 
 
-/* =========================
-   BADGES
+/* ========BADGES=================*/
+   
 
 .badge {
     display: inline-block;
@@ -557,8 +557,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   CARD TITLE
+/* ======= CARD TITLE==================*/
+  
 
 .roast-card h3 {
     margin: 13px 0 9px;
@@ -570,8 +570,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   CARD DESCRIPTION
+/* ===========CARD DESCRIPTION==============*/
+   
 
 .roast-card p {
     margin: 0;
@@ -585,8 +585,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   CARD BOTTOM
+/* =========CARD BOTTOM================*/
+   
 
 .card-bottom {
     display: flex;
@@ -612,8 +612,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   TABLET
+/* =========TABLET================*/
+   
 
 @media (max-width: 900px) {
 
@@ -624,8 +624,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   MOBILE
+/* =========MOBILE================*/
+   
 
 @media (max-width: 650px) {
 
@@ -650,8 +650,8 @@ flex-wrap:wrap;
 }
 
 
-/* =========================
-   SMALL MOBILE
+/* ========== SMALL MOBILE===============*/
+  
 
 @media (max-width: 450px) {
 
