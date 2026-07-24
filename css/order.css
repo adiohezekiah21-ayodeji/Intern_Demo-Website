@@ -113,13 +113,10 @@ body::after{
     border:1px solid rgba(255,255,255,.08);
     backdrop-filter:blur(14px);
     border-radius:22px;
-
     box-shadow:
     0 25px 55px rgba(0,0,0,.35),
     inset 0 1px rgba(255,255,255,.05);
-
     transition:.4s ease;
-
     animation:fadeUp .8s ease;
 }
 
@@ -131,18 +128,20 @@ body::after{
 }
 
 h1{
-    font-size:36px;
-    font-weight:700;
+    font-size:50px;
+    font-weight:500;
     margin-bottom:12px;
-    text-align: center;
+    text-align:center;
+    color: #0fc8e0;
 }
 
 .subtitle{
-    color:#d2bba8;
+    color:#f7f6fa;
     margin-bottom:30px; 
     line-height:1.6;
     text-align: center;
-    font-size: 0.92rem;
+    font-size: 1.0rem;
+    font-style: italic;
 }
 
 form{
@@ -150,7 +149,12 @@ form{
     max-width:450px;
     margin: 0 auto;
 }
-
+.container img{
+    border-radius: 20%;
+    border-style: double;
+    color: #e00f0f;
+    border-start-end-radius: var(--cream-dim);
+}
 .row{
     display:flex;
     flex-direction:column;
