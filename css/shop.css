@@ -77,6 +77,26 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
    ROAST LIST SECTION
 ========================= */
 
+.recipes-title{
+  margin-left: 9%;
+
+}
+
+.recipes-title h2{
+
+    color:#fff;
+    font-size:30px;
+    margin-top:12px;
+    font-family:Georgia, serif;
+}
+
+.recipes-title span{
+
+    color: white;
+    font-size:17px;
+    font-weight:700;
+    letter-spacing:2px;
+    font-family: var(--copper-light);
 .roast-section {
     min-height: 100vh;
     padding: 10px 9px 40px;
@@ -90,7 +110,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    HEADER
-========================= */
 
 .roast-header {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -129,6 +148,7 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
     gap: 9px;
 
     margin-top: 14px;
+    margin-left: 9%;
 }
 
 .filter-buttons button {
@@ -157,9 +177,260 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 }
 
 
+
+
+
+
+/*======================
+Grid
+
+.recipe-grid{
+  margin: 2% 7% 5% 7%;
+    justify-self: center;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+}
+
+/*======================
+Card
+
+.recipe-card{
+
+    background: rgb(67, 34, 12);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    cursor:pointer;
+    width: 400px;
+    height: 480px;
+
+}
+
+.recipe-card:hover{
+
+    transform:translateY(-15px);
+    box-shadow:5px 0px 10px 10px rgba(249, 247, 247, 0.45);
+    border-color:#f8a16ae8;
+    background-color: #7e5436b0;
+}
+
+/*======================
+Image
+
+.image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:230px;
+}
+
+.image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+    
+}
+
+/* Image Zoom */
+
+.recipe-card:hover img{
+
+    transform:scale(1.12);
+    
+}
+
+/* =======================
+      The Cone image
+.cone img{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -7%;
+  margin-right: 4%;
+  display: flex;
+  float: inline-end;
+  z-index: -10;
+
+  
+}
+
+
+
+/*======================
+Badge
+
+.tags{
+  display: flex;
+  float: left;
+  background-color: rgb(184, 88, 18);
+  width: 20%;
+  height: 15%;
+  border-radius: 5px;
+  justify-self: center;
+  justify-items: center;
+  justify-content: center;
+  border-color: #8FA06E;
+  color:rgb(241, 241, 238);
+  margin-top: -5%;
+  
+}
+
+
+
+
+.medicine {
+    color: #27ff87;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+}
+
+
+/*======================
+Content
+
+.content{
+
+    padding:28px;
+}
+
+.content h3{
+
+    color:white;
+
+    font-size:31px;
+
+    margin-bottom:15px;
+
+    font-family:Georgia, serif;
+}
+
+.content p{
+
+    color:#8ea598;
+
+    line-height:1.8;
+
+    margin-bottom:24px;
+}
+
+/*======================
+Bottom badges
+
+.details{
+
+    display:flex;
+
+    gap:14px;
+}
+
+.details{
+    display: inline-flex;
+   
+  
+    color:#8fa998;
+
+    padding:2px 2px;
+
+    font-size:14px;
+}
+
+.value{
+  color: #D9CBB4;
+  font-size: 14px;
+}
+
+.amount{
+  color: #f09b66f9;
+  font-size: 14px;
+  display: inline-block;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.recipe-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.recipes-title h2{
+
+font-size:40px;
+
+}
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.recipe-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.recipes{
+
+padding:70px 20px;
+
+}
+
+.recipes-title h2{
+
+font-size:32px;
+
+}
+
+.image{
+
+height:220px;
+
+}
+
+.content h3{
+
+font-size:24px;
+
+}
+
+.details{
+
+flex-wrap:wrap;
+
+}
+
+}
+
+
+
+
 /* =========================
    ROAST GRID
-========================= */
 
 .roast-grid {
     display: grid;
@@ -174,7 +445,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    ROAST CARD
-========================= */
 
 .roast-card {
     overflow: hidden;
@@ -200,7 +470,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    IMAGE PLACEHOLDER
-========================= */
 
 .bean-image {
     position: relative;
@@ -227,7 +496,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    COFFEE CIRCLE
-========================= */
 
 .coffee-circle {
     position: absolute;
@@ -256,7 +524,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    CARD CONTENT
-========================= */
 
 .card-content {
     padding: 16px 15px 13px;
@@ -265,7 +532,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    BADGES
-========================= */
 
 .badge {
     display: inline-block;
@@ -293,7 +559,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    CARD TITLE
-========================= */
 
 .roast-card h3 {
     margin: 13px 0 9px;
@@ -307,7 +572,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    CARD DESCRIPTION
-========================= */
 
 .roast-card p {
     margin: 0;
@@ -323,7 +587,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    CARD BOTTOM
-========================= */
 
 .card-bottom {
     display: flex;
@@ -351,7 +614,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    TABLET
-========================= */
 
 @media (max-width: 900px) {
 
@@ -364,7 +626,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    MOBILE
-========================= */
 
 @media (max-width: 650px) {
 
@@ -391,7 +652,6 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* =========================
    SMALL MOBILE
-========================= */
 
 @media (max-width: 450px) {
 
