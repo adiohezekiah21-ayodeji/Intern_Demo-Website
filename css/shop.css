@@ -56,8 +56,7 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 .nav-toggle {
   display: none; background: none; border: 1px solid rgba(242,232,216,0.25);
   border-radius: 8px; color: var(--cream); padding: 0.45rem 0.65rem;
-  font-size: 1rem; cursor: pointer;
-}
+  font-size: 1rem; cursor: pointer;g
 
 @media (max-width: 768px) {
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
