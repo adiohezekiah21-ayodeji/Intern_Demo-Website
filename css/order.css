@@ -110,10 +110,9 @@ body::after{
     margin:60px auto;
     padding:45px;
     background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
+    border:5px solid rgba(252, 236, 6, 0.08);
     backdrop-filter:blur(14px);
     border-radius:22px;
-    box-shadow:
     0 25px 55px rgba(0,0,0,.35),
     inset 0 1px rgba(255,255,255,.05);
     transition:.4s ease;
@@ -122,9 +121,7 @@ body::after{
 
 .container:hover{
     transform:translateY(-5px);
-
-    box-shadow:
-    0 35px 70px rgb(233, 182, 115);
+    
 }
 
 h1{
