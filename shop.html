@@ -30,6 +30,14 @@
 ==============================-->
 <section class="recipes">
 
+    <!-- Hidden radios driving the CSS-only filter. Each one must stay a
+         direct sibling of .filter-buttons and .recipe-grid (same parent,
+         placed before them) so the ~ selector below can reach both. -->
+    <input type="radio" name="roast-filter" id="filter-all" class="filter-radio" checked>
+    <input type="radio" name="roast-filter" id="filter-light" class="filter-radio">
+    <input type="radio" name="roast-filter" id="filter-medium" class="filter-radio">
+    <input type="radio" name="roast-filter" id="filter-dark" class="filter-radio">
+
     <div class="recipes-title">
         <h2>The roast list</h2>
         <span>Six origins, rotating with the harvest. Every bag is 
@@ -37,16 +45,16 @@
     </div>
 
         <div class="filter-buttons">
-            <button class="active">All</button>
-            <button>Light</button>
-            <button>Medium</button>
-            <button>Dark</button>
+            <label for="filter-all">All</label>
+            <label for="filter-light">Light</label>
+            <label for="filter-medium">Medium</label>
+            <label for="filter-dark">Dark</label>
         </div>
     <div class="recipe-grid">
 
         <!-- Card 1 -->
 
-        <div class="recipe-card">
+        <div class="recipe-card" data-roast="medium">
 
             <div class="image">
                 <img src="images/shop/colombia.jpg" alt="A Colombian Apple">
@@ -79,7 +87,7 @@
 
         <!-- Card 2 -->
 
-              <div class="recipe-card">
+              <div class="recipe-card" data-roast="light">
 
             <div class="image">
                 <img src="images/shop/euthopia.jpg" alt="A Bright Finish">
@@ -111,7 +119,7 @@
 
         <!-- Card 3 -->
 
-              <div class="recipe-card">
+              <div class="recipe-card" data-roast="dark">
 
             <div class="image">
                 <img src="images/shop/brazil.jpg" alt="A Dark Chocolate">
@@ -143,7 +151,7 @@
 
         <!-- Card 4 -->
 
-              <div class="recipe-card">
+              <div class="recipe-card" data-roast="medium">
 
             <div class="image">
                 <img src="images/shop/cost-rica.jpg" alt="A Costa-rica honey">
@@ -175,7 +183,7 @@
 
         <!-- Card 5 -->
 
-              <div class="recipe-card">
+              <div class="recipe-card" data-roast="dark">
 
             <div class="image">
                <img src="images/shop/indonesia.jpg" alt="A Indonesian Cedar">
@@ -207,7 +215,7 @@
 
         <!-- Card 6 -->
 
-              <div class="recipe-card">
+              <div class="recipe-card" data-roast="light">
 
             <div class="image">
                 <img src="images/shop/kenya2.jpg" alt="A Kenyan Black-current">
