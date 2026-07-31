@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard: Ember & Bean</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember &amp; Bean — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    
-     <!--NAVIGATION BAR-->
+
+<!--NAVIGATION BAR-->
 
     <nav class="site-nav" style="position:sticky;">
   <div class="brand">
@@ -22,158 +25,239 @@
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 </nav>
-<div>
-  
-<section class="dashboard">
-
-    <!-- LEFT SIDEBAR -->
-    <aside class="sidebar">
-
-        <p class="sidebar-heading">SUBSCRIBER</p>
-
-        <ul class="sidebar-menu">
-
-            <li class="active">
-                <a href="#">Overview</a>
-            </li>
-
-            <li>
-                <a href="order_history.html">Order history</a>
-            </li>
-
-            <li>
-                <a href="roast preference.html">Roast preferences</a>
-            </li>
-
-            <li>
-                <a href="#">Shipping</a>
-            </li>
-
-            <li>
-                <a href="#">Account</a>
-            </li>
-
-        </ul>
-
-    </aside>
 
 
+<!-- Tab-driving radios: must be siblings before .shell for the ~ combinator -->
+<input type="radio" name="dash-tab" id="t-overview" class="tab-radio" checked>
+<input type="radio" name="dash-tab" id="t-orders" class="tab-radio">
+<input type="radio" name="dash-tab" id="t-roast" class="tab-radio">
+<input type="radio" name="dash-tab" id="t-shipping" class="tab-radio">
+<input type="radio" name="dash-tab" id="t-account" class="tab-radio">
 
-    <!-- MAIN CONTENT -->
+<div class="shell">
 
-    <main class="dashboard-main">
+  <!-- VERTICAL SUB-NAVBAR (left column) -->
+  <aside class="sub-nav">
+    <div class="eyebrow">Subscriber</div>
+    <nav class="side-nav">
+      <label for="t-overview">Overview</label>
+      <label for="t-orders">Order history</label>
+      <label for="t-roast">Roast preferences</label>
+      <label for="t-shipping">Shipping</label>
+      <label for="t-account">Account</label>
+    </nav>
+  </aside>
 
-        <div class="welcome">
+  <!-- MAIN PANELS -->
+  <main>
 
-            <h1>Welcome back, Maya</h1>
+    <!-- OVERVIEW -->
+    <section class="panel" id="p-overview">
+      <div class="page-head">
+        <h1>Welcome back, Maya</h1>
+        <p>Here's where things stand with your subscription.</p>
+      </div>
 
-            <p>Your next bag ships in 3 days.</p>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="eyebrow">Next shipment</div>
+          <div class="value">Batch #047</div>
+        </div>
+        <div class="stat">
+          <div class="eyebrow">Roast on file</div>
+          <div class="value">Medium</div>
+        </div>
+        <div class="stat">
+          <div class="eyebrow">Bags per delivery</div>
+          <div class="value">2 <small>bags</small></div>
+        </div>
+      </div>
 
+      <div class="card">
+        <h3>Jump back in</h3>
+        <p class="hint">Pick up where you left off.</p>
+        <div class="quick-links">
+          <label class="btn-secondary" for="t-orders" style="cursor:pointer;">View order history</label>
+          <label class="btn-secondary" for="t-roast" style="cursor:pointer;">Edit roast preferences</label>
+          <label class="btn-secondary" for="t-shipping" style="cursor:pointer;">Check shipping details</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER HISTORY -->
+    <section class="panel" id="p-orders">
+      <div class="page-head">
+        <h1>Order history</h1>
+        <p>Every bag we've shipped you, most recent first.</p>
+      </div>
+      <div class="card" style="padding-top:6px; padding-bottom:6px;">
+        <div class="order-list">
+          <div class="order-row">
+            <span class="name">Yirgacheffe, Ethiopia — 2 bags</span>
+            <span class="meta"><span class="status transit">In transit</span><span class="date">Jul 19</span></span>
+          </div>
+          <div class="order-row">
+            <span class="name">Huila, Colombia — 2 bags</span>
+            <span class="meta"><span class="status delivered">Delivered</span><span class="date">Jul 05</span></span>
+          </div>
+          <div class="order-row">
+            <span class="name">Nyeri, Kenya — 1 bag</span>
+            <span class="meta"><span class="status delivered">Delivered</span><span class="date">Jun 21</span></span>
+          </div>
+          <div class="order-row">
+            <span class="name">Minas Gerais, Brazil — 2 bags</span>
+            <span class="meta"><span class="status delivered">Delivered</span><span class="date">Jun 07</span></span>
+          </div>
+          <div class="order-row">
+            <span class="name">Toraja, Indonesia — 1 bag</span>
+            <span class="meta"><span class="status delivered">Delivered</span><span class="date">May 24</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROAST PREFERENCES -->
+    <section class="panel" id="p-roast">
+      <div class="page-head">
+        <h1>Roast preferences</h1>
+        <p>This is what we'll default to on your next shipment — you can still swap it from the Shop.</p>
+      </div>
+      <div class="card">
+        <label class="field" style="margin-bottom:10px; display:block;">Roast level</label>
+        <input type="radio" name="roast-level" id="roast-light" class="tab-radio">
+        <input type="radio" name="roast-level" id="roast-medium" class="tab-radio" checked>
+        <input type="radio" name="roast-level" id="roast-dark" class="tab-radio">
+        <div class="segmented">
+          <label for="roast-light">Light</label>
+          <label for="roast-medium">Medium</label>
+          <label for="roast-dark">Dark</label>
         </div>
 
-
-
-        <!-- SMALL INFO CARDS -->
-
-        <div class="stats">
-
-            <div class="stat-card">
-
-                <span>NEXT SHIPMENT</span>
-
-                <h3>Jul 19</h3>
-
-            </div>
-
-            <div class="stat-card">
-
-                <span>BAGS RECEIVED</span>
-
-                <h3>14</h3>
-
-            </div>
-
-            <div class="stat-card">
-
-                <span>PLAN</span>
-
-                <h3>Biweekly</h3>
-
-            </div>
-
+        <div class="select-row">
+          <div class="field">
+            <label for="grind">Grind type</label>
+            <select id="grind">
+              <option>Whole bean</option>
+              <option selected>Drip / filter</option>
+              <option>Espresso</option>
+              <option>French press</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bags">Bags per delivery</label>
+            <select id="bags">
+              <option>1 bag</option>
+              <option selected>2 bags</option>
+              <option>3 bags</option>
+            </select>
+          </div>
         </div>
 
+        <button class="btn-primary">Save preferences</button>
+      </div>
+    </section>
 
+    <!-- SHIPPING -->
+    <section class="panel" id="p-shipping">
+      <div class="page-head">
+        <h1>Shipping</h1>
+        <p>Where your next bag is headed.</p>
+      </div>
 
-        <!-- ORDER HISTORY -->
+      <div class="card addr">
+        <h3>Delivery address</h3>
+        <address>
+          Maya Rodriguez<br>
+          14 Aso Drive, Asokoro<br>
+          Abuja, FCT, Nigeria
+        </address>
+        <button class="btn-secondary">Edit address</button>
+      </div>
 
-        <div class="history-card">
-
-            
-                <h2>Order history</h2>
-            
-
-            <div class="history-row">
-
-                <span>Asokoro Abuja, Nigeria</span>
-
-                <span>Jul 05</span>
-
-            </div>
-
-            <div class="history-row">
-
-                <span>Acra, Ghana</span>
-
-                <span>Jun 21</span>
-
-            </div>
-
-            <div class="history-row">
-
-                <span>Nyeri, Kenya</span>
-
-                <span>Jun 07</span>
-
-            </div>
-
+      <div class="card">
+        <div class="toggle-row">
+          <div class="copy">
+            <strong>Leave at the door</strong>
+            <span>Skip the doorbell, we'll leave it safely.</span>
+          </div>
+          <span class="switch">
+            <input type="checkbox" checked>
+            <span class="track"></span>
+            <span class="thumb"></span>
+          </span>
         </div>
-
-    </main>
-
-
-
-
-    <!-- RIGHT PANEL -->
-
-    <aside class="roast-panel">
-
-        <div class="bean-circle">
-
-            <div class="bean-half"></div>
-
+        <div class="toggle-row">
+          <div class="copy">
+            <strong>Text me on delivery day</strong>
+            <span>A heads-up the morning it ships.</span>
+          </div>
+          <span class="switch">
+            <input type="checkbox">
+            <span class="track"></span>
+            <span class="thumb"></span>
+          </span>
         </div>
+      </div>
+    </section>
 
-        <p class="roast-title">
+    <!-- ACCOUNT -->
+    <section class="panel" id="p-account">
+      <div class="page-head">
+        <h1>Account</h1>
+        <p>Your profile and notification settings.</p>
+      </div>
 
-            CURRENTLY ROASTING
+      <div class="card">
+        <div class="field-row">
+          <div class="field">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" value="Maya Rodriguez">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" value="maya@email.com">
+          </div>
+        </div>
+        <button class="btn-primary">Save changes</button>
+      </div>
 
-        </p>
+      <div class="card">
+        <div class="toggle-row">
+          <div class="copy">
+            <strong>Email me roast notes</strong>
+            <span>Tasting notes for every new batch.</span>
+          </div>
+          <span class="switch">
+            <input type="checkbox" checked>
+            <span class="track"></span>
+            <span class="thumb"></span>
+          </span>
+        </div>
+        <div class="toggle-row">
+          <div class="copy">
+            <strong>Marketing emails</strong>
+            <span>Occasional offers and new origins.</span>
+          </div>
+          <span class="switch">
+            <input type="checkbox">
+            <span class="track"></span>
+            <span class="thumb"></span>
+          </span>
+        </div>
+      </div>
+    </section>
 
-        <h2>Batch #047</h2>
+  </main>
 
-        <p class="roast-text">
+  <!-- RIGHT RAIL -->
+  <aside class="roast-card">
+    <div class="roast-orb"></div>
+    <div class="eyebrow">Currently roasting</div>
+    <div class="batch">Batch #047</div>
+    <p>Medium roast, for your next shipment.</p>
+  </aside>
 
-            Medium roast, for your next shipment.
-
-        </p>
-
-    </aside>
-
-</section>
-  
-</div>
-
+  </div>
 
 
 <!--FOOTER-->
@@ -220,9 +304,10 @@
   </div>
   <div class="footer-bar">
     <span>© 2026 Ember & Bean Roastery</span>
-    <span class="mono" id="pageLabel">Dashboard</span>
+    <span class="mono" id="pageLabel">Order</span>
   </div>
 </footer>
+
 
 
 </body>
