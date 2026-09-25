@@ -15,15 +15,15 @@
 
     <nav class="site-nav" style="position:sticky;">
   <div class="brand">
-    <a href="home.html">Ember <span>&</span> Bean</a>
+    <a href="index.html">Ember <span>&</span> Bean</a>
   </div>
   <ul class="nav-links" id="navLinks">
-    <li><a data-screen="landing"  href="home.html">Home</a></li>
+    <li><a data-screen="landing" href="index.html">Home</a></li>
     <li><a data-screen="gallery" href="shop.html">Shop</a></li>
     <li><a data-screen="dashboard" class="active" href="dashboard.html">Dashboard</a></li>
     <li><a data-screen="order" href="order.html">Order</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">☰</button>
 </nav>
 
 
@@ -153,7 +153,8 @@
           </div>
         </div>
 
-        <button class="btn-primary">Save preferences</button>
+        <button class="btn-primary" type="button" data-dashboard-save="preferences">Save preferences</button>
+        <p class="form-status" data-dashboard-status="preferences" role="status" aria-live="polite"></p>
       </div>
     </section>
 
@@ -166,12 +167,24 @@
 
       <div class="card addr">
         <h3>Delivery address</h3>
-        <address>
-          Maya Rodriguez<br>
-          14 Aso Drive, Asokoro<br>
-          Abuja, FCT, Nigeria
+        <address data-address-display>
+          <span>Maya Rodriguez</span><br>
+          <span data-address-street>14 Aso Drive, Asokoro</span><br>
+          <span data-address-city>Abuja, FCT, Nigeria</span>
         </address>
-        <button class="btn-secondary">Edit address</button>
+        <button class="btn-secondary" type="button" data-edit-address>Edit address</button>
+        <form class="address-form" data-address-form hidden>
+          <div class="field">
+            <label for="addressStreet">Street address</label>
+            <input id="addressStreet" name="street" value="14 Aso Drive, Asokoro" required>
+          </div>
+          <div class="field">
+            <label for="addressCity">City, region, and country</label>
+            <input id="addressCity" name="city" value="Abuja, FCT, Nigeria" required>
+          </div>
+          <button class="btn-primary" type="submit">Save address</button>
+        </form>
+        <p class="form-status" data-dashboard-status="address" role="status" aria-live="polite"></p>
       </div>
 
       <div class="card">
@@ -181,7 +194,7 @@
             <span>Skip the doorbell, we'll leave it safely.</span>
           </div>
           <span class="switch">
-            <input type="checkbox" checked>
+            <input type="checkbox" aria-label="Leave at the door" checked>
             <span class="track"></span>
             <span class="thumb"></span>
           </span>
@@ -192,7 +205,7 @@
             <span>A heads-up the morning it ships.</span>
           </div>
           <span class="switch">
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Text me on delivery day">
             <span class="track"></span>
             <span class="thumb"></span>
           </span>
@@ -218,7 +231,8 @@
             <input type="email" id="email" value="maya@email.com">
           </div>
         </div>
-        <button class="btn-primary">Save changes</button>
+        <button class="btn-primary" type="button" data-dashboard-save="account">Save changes</button>
+        <p class="form-status" data-dashboard-status="account" role="status" aria-live="polite"></p>
       </div>
 
       <div class="card">
@@ -228,7 +242,7 @@
             <span>Tasting notes for every new batch.</span>
           </div>
           <span class="switch">
-            <input type="checkbox" checked>
+            <input type="checkbox" aria-label="Email me roast notes" checked>
             <span class="track"></span>
             <span class="thumb"></span>
           </span>
@@ -239,7 +253,7 @@
             <span>Occasional offers and new origins.</span>
           </div>
           <span class="switch">
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Marketing emails">
             <span class="track"></span>
             <span class="thumb"></span>
           </span>
@@ -266,40 +280,35 @@
   <div class="footer-main">
     <div>
       <div class="brand" style="margin-bottom:0.8rem;">
-        <a href="home.html">Ember <span>&</span> Bean</a>
+        <a href="index.html">Ember <span>&</span> Bean</a>
       </div>
       <p>A small-batch roastery working directly with three family farms. We roast to order and ship within 48 hours, every time.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="X / Twitter">X</a>
-        <a href="#" aria-label="Email">@</a>
-      </div>
     </div>
     <div>
       <h4>Explore</h4>
       <ul class="footer-links">
-        <li><a data-screen="landing" href="Home.html">Home</a></li>
-        <li><a data-screen="gallery" href="Shop.html">Shop</a></li>
-        <li><a data-screen="dashboard" href="Dashboard.html">Dashboard</a></li>
-        <li><a data-screen="order" href="Order.html">Order</a></li>
+        <li><a data-screen="landing" href="index.html">Home</a></li>
+        <li><a data-screen="gallery" href="shop.html">Shop</a></li>
+        <li><a data-screen="dashboard" href="dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a data-screen="order" href="order.html">Order</a></li>
       </ul>
     </div>
     <div>
-      <h4>Support</h4>
+      <h4>Manage your coffee</h4>
       <ul class="footer-links">
-        <li><a href="#">Shipping & returns</a></li>
-        <li><a href="#">Subscription FAQ</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li><a href="order.html">Start a subscription</a></li>
+        <li><a href="dashboard.html">Manage your subscription</a></li>
+        <li><a href="shop.html">Browse the roast list</a></li>
       </ul>
     </div>
     <div>
       <h4>Stay in the loop</h4>
       <p>New origins and roast notes, about once a month. No spam.</p>
-      <form class="footer-newsletter" onsubmit="return false;">
-        <input type="email" placeholder="you@email.com" aria-label="Email for newsletter">
+      <form class="footer-newsletter" data-newsletter-form>
+        <input type="email" placeholder="you@email.com" aria-label="Email for newsletter" required>
         <button type="submit" class="btn btn-primary" style="padding:0.6rem 1.1rem; font-size:0.85rem;">Join</button>
       </form>
+      <p class="form-status" data-newsletter-status role="status" aria-live="polite"></p>
     </div>
   </div>
   <div class="footer-bar">
@@ -308,7 +317,7 @@
   </div>
 </footer>
 
-
+<script src="js/site.js" defer></script>
 
 </body>
 </html>

@@ -344,3 +344,106 @@ footer { border-top: 1px solid rgba(242,232,216,0.08); margin-top: 3.5rem; }
 
 @media (max-width: 820px) { .footer-main { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .footer-main { grid-template-columns: 1fr; } }
+
+.hero-content {
+    padding: 3rem clamp(1rem, 4vw, 4rem);
+    gap: 2rem;
+}
+
+.left {
+    min-width: 0;
+    margin: 0;
+}
+
+.left h1 {
+    font-size: 4rem;
+    overflow-wrap: anywhere;
+}
+
+.buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: 0.75rem 1.4rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cards {
+    width: min(100% - 2rem, 1200px);
+    margin: 4rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 1rem;
+}
+
+.cards .card {
+    min-width: 0;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.cards .card h3 {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .left {
+        width: 100%;
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    .left h1 {
+        font-size: 3rem;
+    }
+
+    .right {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+
+    .left h1 {
+        font-size: 2.4rem;
+    }
+
+    .small-title {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .buttons a {
+        width: 100%;
+    }
+
+    .circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .inner-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .inner-circle h2 {
+        font-size: 1.5rem;
+    }
+}

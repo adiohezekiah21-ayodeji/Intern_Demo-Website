@@ -59,5 +59,9 @@ A collaborative website project developed by four interns to practice Git, GitHu
 - Do not merge your own Pull Requests.
 - Pull the latest changes from `main` before starting a new task.
 
+## Deployment Notes
+
+The site is a static HTML, CSS, and JavaScript project and can be hosted on any static web host. The subscription form, newsletter form, and dashboard saves are demo interactions only; they do not send or persist customer data. Connect a secure backend and checkout provider before accepting real orders or customer information.
+
 
 
